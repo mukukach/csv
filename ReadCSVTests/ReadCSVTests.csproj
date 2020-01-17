@@ -13,15 +13,4 @@
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\City\Cities.csproj" />
-    <ProjectReference Include="..\csv\Csv.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="StatisticalCalculator">
-      <HintPath>..\..\..\..\..\Desktop\GSBCalculator\StatisticalCalculator\bin\Debug\netcoreapp3.1\StatisticalCalculator.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

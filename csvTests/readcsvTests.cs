@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-
+using StatisticalCalculator;
 namespace csv.Tests
 {
     [TestClass()]
@@ -19,9 +19,9 @@ namespace csv.Tests
             var doubleTypeConversion = new DoubleConversion();
             IList<CityModelImport> myList = ReadCsv.ReadCsvFile<CityModelImport, CityMap>(path, doubleTypeConversion);
             var countryCapitalQuery = (from s in myList
-                                      where s.Capital.Equals("primary")
-                                      orderby s.Country ascending
-                                      select s);
+                                       where s.Capital.Equals("primary")
+                                       orderby s.Country ascending
+                                       select s);
             /*
             foreach (CityModelImport city in countryCapitalQuery)
             {
@@ -42,7 +42,6 @@ namespace csv.Tests
             //Debug.Write(QSCount);
 
             Assert.AreEqual(15493, myList.Count());
-
             using (var dbContext = new CitiesContext())
             {
                 dbContext.Database.Connection.Close();
@@ -75,6 +74,7 @@ namespace csv.Tests
                     db.SaveChanges();
                     int id = CountryEntity.CountryID;
                     Debug.Write(country);
+                    
                     foreach (var city in country)
                     {
                         var CityEntity = new CityEntity

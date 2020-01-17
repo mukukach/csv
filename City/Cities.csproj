@@ -9,4 +9,10 @@
     <ProjectReference Include="..\EntityOrm\EntityOrm.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Operations">
+      <HintPath>..\..\..\..\..\Desktop\GSBCalculator\Operations\bin\Debug\netcoreapp3.1\Operations.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
